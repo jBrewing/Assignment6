@@ -51,11 +51,13 @@ week_hourlyMinVol = week_hourlyTotVol.min()
 
 
 # Weekend stats
+# Mean and std.dev
 weekend_hourlyAvgVol = weekend_hourlyTotVol.groupby(weekend_hourlyTotVol.index.hour).mean()
 weekend_hourlyStdVol = weekend_hourlyTotVol.groupby(weekend_hourlyTotVol.index.hour).mean()
 
-weekend_hourlyTotVol = weekend_hourlyTotVol.max()
-weekend_hourlyTotVol = weekend_hourlyTotVol.min()
+# Max and min
+weekend_hourlyMaxVol = weekend_hourlyTotVol.max()
+weekend_hourlyMinVol = weekend_hourlyTotVol.min()
 
 # 6. Plot average hourly weekday water demand vs average hourly weekend water demand
 
